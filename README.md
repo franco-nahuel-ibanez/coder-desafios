@@ -1,1 +1,3 @@
-[![Clase-8-Router-Multer.jpg](https://i.postimg.cc/x1CskwdT/Clase-8-Router-Multer.jpg)](https://postimg.cc/SJBL3t8w)
+# CoderHouse
+
+Hola! Este repositorio cuenta con los diferentes **desafios** planteados en el curso de **Programación Backend en Node Js** de coderhouse.
