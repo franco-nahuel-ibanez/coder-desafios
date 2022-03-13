@@ -1,19 +1,6 @@
 const router = require('express').Router();
 
-let productos = [
-    {
-        id: 1,
-        title: "Radio",
-        price: 250,
-        thumbnail: "https://cdn2.iconfinder.com/data/icons/music-flat-pixel-perfect/64/music-10-128.png"
-    },
-    {
-        id: 2,
-        title: "Computer",
-        price: 700,
-        thumbnail: "https://cdn3.iconfinder.com/data/icons/seo-162/96/monitor_screen_computer_search_find_browser_website-128.png"
-    }
-];
+let productos = [];
 
 
 router.get('/', (req, res) => {
