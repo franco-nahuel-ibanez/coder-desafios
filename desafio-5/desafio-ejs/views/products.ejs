@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("partials/head") %>
+</head>
+<body>
+    <div class="container bg-secondary p-0 min-vh-100">
+        <%- include("partials/nav") %>
+        
+        <div class="row mt-5 d-flex justify-content-center">
+            <div class="col-md-8">
+                <% if(productos.length == 0){ %>
+                    <div class="alert alert-success">
+                        <p>Products not found</p>
+                    </div>
+                <% } else { %>
+                    <%- include("partials/table") %>
+                <% } %>
+
+            </div>
+        </div>
+    </div>
+
+    <%- include("partials/script") %>
+</body>
+</html>
+
+
