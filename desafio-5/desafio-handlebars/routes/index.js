@@ -1,14 +1,13 @@
 const router = require('express').Router();
 
-let productos = [];
-
+let products = []
 
 router.get('/', (req, res) => {
-    res.render('home');
+    res.sendFile(__diname, '../index.html')
 });
 
 router.get('/productos', (req, res) => {
-    res.render('products', { productos })
+    res.json(products)
 })
 
 
@@ -16,21 +15,20 @@ router.post('/productos', (req, res) => {
     const { title, price, thumbnail } = req.body;
     if( !title || !price || !thumbnail ) res.json({'error': 'Todos los campos son obligatorios'});
     
-    const idProductos = productos.map( p => p.id );
-    const maxId = Math.max(...idProductos) + 1;
+    const idProducts = products.map( p => p.id );
+    const maxId = Math.max(...idProducts) + 1;
     const id = maxId > 0 ? maxId : 1;
     
-    const nuevoProducto = {
+    const newProduct = {
         id,
         title,
         price,
         thumbnail
     }
-    productos = [...productos, nuevoProducto]
+    products = [...products, newProduct]
     
-    res.redirect('/');
+    res.json(products);
 });
-
 
 
 module.exports = router;
