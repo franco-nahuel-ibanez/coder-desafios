@@ -6,4 +6,4 @@ const sqliteConfig = {
     useNullAsDefault: true
 }
 
-module.exports = { sqliteConfig }
+module.exports = { sqliteConfig };

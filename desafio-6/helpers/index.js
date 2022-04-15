@@ -14,9 +14,9 @@ exports.getData = async () => {
         const products = await productSchema.getAll();
         const messages = await messageSchema.getAll();
 
-        return { templateProducts, templateMsg, products, messages };
+        return { templateProducts, templateMsg, products, messages }
     } catch (error) {
-        console.log({error})
+        console.log({error});
     }
 };
 

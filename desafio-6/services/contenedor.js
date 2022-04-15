@@ -10,7 +10,7 @@ class Contenedor {
         } catch (error) {
             throw new Error("No se pudo agragar el nuevo dato")
         }
-    }
+    };
 
     async getAll(){
         try {

@@ -43,7 +43,7 @@ io.on('connection', async (socket) => {
         const newMessages = await addMessage(newMessage);
         io.sockets.emit('messages', newMessages);
     })
-})
+});
 
 //server
 server.listen(app.get('port'), () => {

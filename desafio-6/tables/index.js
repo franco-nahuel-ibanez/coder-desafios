@@ -12,7 +12,7 @@ dbProductos.schema.hasTable('productos').then( exists => {
         t.string('title'),
         t.integer('price'),
         t.string('thumbnail')    
-      });
+      })
     }
   })
     .then(() => console.log('tabla "productos" creada'))

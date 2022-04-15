@@ -4,7 +4,7 @@ let products = []
 
 router.get('/', (req, res) => {
     res.sendFile(__diname, '../index.html')
-});
+})
 
 router.get('/productos', (req, res) => {
     res.json(products)

@@ -10,8 +10,8 @@ socket.on('products', ({templateProducts, templateMsg, products, messages}) => {
     msg = Handlebars.compile(templateMsg)
     const htmlMsg = msg({messages})
 
-    document.getElementById('table').innerHTML = htmlProducts
-    document.getElementById('messages').innerHTML = htmlMsg
+    document.getElementById('table').innerHTML = htmlProducts;
+    document.getElementById('messages').innerHTML = htmlMsg;
 })
 
 

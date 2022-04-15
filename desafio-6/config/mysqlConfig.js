@@ -9,4 +9,4 @@ const mysqlConfig = {
     }
 }
 
-module.exports = { mysqlConfig };
+module.exports = { mysqlConfig }
