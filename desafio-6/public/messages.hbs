@@ -1,0 +1,13 @@
+{{#if messages.length }}
+    {{#each messages}}
+        <div class="d-flex justify-content-space-between">
+            <span class="text-primary">{{email}}</span>
+            <span class="text-danger ms-2">[{{date}}]:</span>
+            <span class="text-success ms-3">{{msg}}</span>
+        </div>
+    {{/each}}
+{{else}}
+    <div class="alert alert-success" role="alert">
+        <p>No messages</p>
+    </div>
+{{/if}}
