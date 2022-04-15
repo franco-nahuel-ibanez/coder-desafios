@@ -26,10 +26,10 @@ dbProductos.schema.hasTable('productos').then( exists => {
 dbMesajes.schema.hasTable('mensajes').then( exists => {
     if (!exists) {
         return dbMesajes.schema.createTable('mensajes', t => {
-            table.increments('id')
-            table.string('email')
-            table.timestamp('date')
-            table.string('msg')
+            t.increments('id')
+            t.string('email')
+            t.timestamp('date')
+            t.string('msg')
         });
     }
 })
