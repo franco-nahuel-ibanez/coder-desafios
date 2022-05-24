@@ -6,7 +6,6 @@ const path = require('path');
 const Usuario = require('../model/Usuarios')
 const bcrypt = require('bcrypt');
 const passport = require('passport');
-
 const user = {}
 
 router.get('/', auth, (req, res) => {
@@ -30,7 +29,6 @@ router.post(
 
 router.post('/logout', (req, res) => {
     const user = req.session.user
-    req.logOut();
     req.session.destroy( err => {
         if(!err) res.render('table', {user})
         else res.send({status: 'Logout Error', body: err})
