@@ -1,0 +1,36 @@
+
+1°parte
+node app -p 8080 -m fork
+node app -p 8080 -m cluster
+
+2°parte: usando nodemon
+nodemon app.js
+nodemon app.js -p 8080 -m fork
+nodemon app.js -p 8080 -m cluster
+
+3°parte: usando forever
+Modo fork
+forever start app.js -p 8080 -m fork
+forever stopall
+
+Modo cluster
+forever start app.js -p 8080 -m cluster
+
+listar procesos
+forever list
+
+4°parte: usando pm2
+Modo fork
+pm2 start app.js --name="Server1" --watch -- 8080
+
+Modo cluster
+pm2 start app.js --name="Serverx" --watch -i max
+
+
+5°parte: levantar servidores para probar nginx
+pm2 start app.js --name="Server1" --watch -- 8082
+pm2 start app.js --name="Server1" --watch -- 8083
+pm2 start app.js --name="Server1" --watch -- 8084
+pm2 start app.js --name="Server1" --watch -- 8085
+
+
