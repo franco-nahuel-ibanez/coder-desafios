@@ -1,0 +1,13 @@
+{{#if chats.length }}
+    {{#each chats}}
+        <div class="d-flex justify-content-space-between">
+            <span class="text-primary">{{_doc.author.id}}</span>
+            <span class="text-danger ms-2">[{{_doc.date}}]:</span>
+            <span class="text-success ms-3">{{_doc.text}}</span>
+        </div>
+    {{/each}}
+{{else}}
+    <div class="alert alert-success" role="alert">
+        <p>No messages </p>
+    </div>
+{{/if}}
